@@ -1,5 +1,5 @@
 export function isAuthenticated(){
-    return (getToken() && getUser()) ? true : false;
+    return (getToken() && getUser() && getUserId()) ? true : false;
 }
 
 export function getToken(){
@@ -10,7 +10,12 @@ export function getUser(){
     return localStorage.getItem("roles");
 }
 
+export function getUserId(){
+    return localStorage.getItem("id");
+}
+
 export function logout(){
     localStorage.removeItem("jwt");
     localStorage.removeItem("roles");
+    localStorage.removeItem("id");
 }

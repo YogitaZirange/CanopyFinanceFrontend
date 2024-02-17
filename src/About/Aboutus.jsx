@@ -29,10 +29,11 @@ const Aboutus = () => {
     <Container align="center">
         <Header text="Welcome to About Us page">
         </Header>
+
       <h1 style={{ textAlign: 'center' }}>Our Team</h1>
 
       <Row>
-        <Col md={2} style={{ marginBottom: '20px', textAlign: 'center' }}>
+        <Col  md={2} style={{ marginBottom: '20px', textAlign: 'center' }}>
           <Card>
             <Card.Img src={Goutam} alt="Goutam Hukeri" style={fixedImageStyle} />
             <Card.Body>

@@ -22,6 +22,7 @@ export function SignIn() {
           const result= await login(formData);
           localStorage.setItem("jwt",result.jwt);
           localStorage.setItem("roles",result.roles);
+          localStorage.setItem("id",result.id);
           navigate("/");
           //navigate("/dashboard");
         } catch (error) {
@@ -32,7 +33,8 @@ export function SignIn() {
     return (
         <>
         <NavigationBar/>
-        <Header text="Welcome to Our Webiste"> </Header>
+        <Header text="Welcome to Login Page"> </Header>
+
         <Container className="mt-5">
             <Row className="justify-content-center">
                 <Col lg={4}>
@@ -43,6 +45,7 @@ export function SignIn() {
                             <Form.Label>User name</Form.Label>
                             <Form.Control type="text" placeholder="Enter Email" name="email" onChange={handleChange} />
                         </Form.Group>
+                  
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
@@ -58,6 +61,7 @@ export function SignIn() {
                 </Col>
             </Row>
         </Container>
+        
         </>
     );
 }

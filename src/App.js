@@ -15,6 +15,10 @@ import Aboutus from './About/Aboutus';
 import FeedbackAdd from './Feedback/FeedbackAdd';
 import FeedbackEdit from './Feedback/FeedbackEdit';
 import FeedbackList from './Feedback/FeedbackList';
+import TransactionAdd from './Transaction/TransactionAdd';
+import OrderAdd from './Order/OrderAdd';
+import ViewProducts from './Buyer/ViewProducts';
+
 
 function App() {
   return (
@@ -29,14 +33,22 @@ function App() {
       <Route path="/investor" element={<Investor/>}></Route>
       <Route path="/buyer" element={<Buyer/>}></Route>
 
-     
+        <Route path="/viewallproduct" element={<ViewProducts/>}></Route>
+
         <Route path="/addproduct" element={<ProductAdd/>}></Route>
-        <Route path="/viewproduct" element={<ProductList/>}></Route>
+        {/* <Route path="/viewproduct" element={<ProductList/>}></Route> */}
         <Route path="/editproduct" element={<ProductEdit/>}></Route>
+
+        <Route path="/addorder" element={<OrderAdd/>}></Route>
+
+
+        <Route path="/addtransaction" element={<TransactionAdd/>}></Route>
 
         <Route path="/addfeedback" element={<FeedbackAdd/>}></Route>
         <Route path="/editfeedback" element={<FeedbackEdit/>}></Route>
         <Route path="/viewfeedback" element={<FeedbackList/>}></Route>
+
+
 
         <Route path="/aboutus" element={<Aboutus/>}></Route>
 

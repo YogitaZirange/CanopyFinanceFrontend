@@ -8,7 +8,9 @@ const ProductList = () => {
     <>
     <NavigationBar/>
    <Container>
-    <Header text="Welcome to Our Product List"></Header>
+
+    <Header text="Welcome to  Product List"></Header>
+    
    </Container>
    </>
 

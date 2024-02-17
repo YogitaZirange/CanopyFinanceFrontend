@@ -65,25 +65,62 @@ export function NavigationBar() {
                         </LinkContainer>
                         )}
 
-                       <LinkContainer to="/viewproduct">
+                       {/* <LinkContainer to="/viewproduct">
+                            <Nav.Link>All Products</Nav.Link>
+                        </LinkContainer> */}
+
+                        <LinkContainer to="/viewallproduct">
                             <Nav.Link>All Products</Nav.Link>
                         </LinkContainer>
-                       
 
+
+
+                        {userRole === "BUYER" && (
+                        <LinkContainer to="/addorder">
+                            <Nav.Link>Order</Nav.Link>
+                        </LinkContainer>
+                        )}
+
+
+                        <LinkContainer to="/addtransaction">
+
+                        <Nav.Link>Transaction</Nav.Link>
+                        </LinkContainer>
+                       
+                         
                         <LinkContainer to="/addfeedback">
+
                         <Nav.Link>FeedBack</Nav.Link>
                         </LinkContainer>
 
+
+                  
+                
+
+{/*                   
+                        <LinkContainer to="/addfeedback">
+                        {["SUPPLIER", "BUYER", "INVESTOR"].includes(userRole) && ( 
+
+                        <Nav.Link>FeedBack</Nav.Link>
+                        )}
+                        </LinkContainer> */}
+                  
+                 
+
+
                         {/* <LinkContainer to="/editfeedback">
+                          {["SUPPLIER", "BUYER", "INVESTOR"].includes(userRole) && (
+                                <Nav.Link>FeedBack</Nav.Link>
+                     )}
                         <Nav.Link>FeedBack</Nav.Link>
                         </LinkContainer> */}
 
-                        {userRole === "ADMIN" && (
+                        {/* {userRole === "ADMIN" && (
                         <LinkContainer to="/viewfeedback">
                         <Nav.Link>FeedBacks</Nav.Link>
                         </LinkContainer>
                         )}
-                  
+                   */}
 
                         <LinkContainer to="/aboutus">
                             <Nav.Link>About</Nav.Link>
@@ -114,7 +151,8 @@ export function NavigationBar() {
                         </LinkContainer> */}
 
                     </Nav>
-                    <Button variant="primary" size="sm" onClick={handleLogoutClick}>Logout</Button>
+                    {isAuthenticated()  &&  <Button variant="primary" size="sm" onClick={handleLogoutClick}>Logout</Button> }  
+                   
                 </Navbar.Collapse>
             </Container>
         </Navbar>

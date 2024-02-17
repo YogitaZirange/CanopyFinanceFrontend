@@ -8,7 +8,7 @@ const FeedbackAdd = () => {
     <> 
     <NavigationBar/>
    <Container>
-    <Header text="Welcome to Feedback Form ">
+    <Header text="Welcome to Feedback ">
     </Header>
    </Container>
    </>
